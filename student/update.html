@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Record</title>
+	<style>
+		*{
+			align-content:center;
+			text-align:center;
+		}
+	</style>
+
+<link rel="stylesheet" href="insert.css">
+<link rel="stylesheet" href="nav.css">
+
+</head>
+
+
+<body>
+	
+  <div class="topnav">
+	<a  href="insert.html">Insert</a>
+	<a  href="display.html">Display</a>
+	<a href="delete.html">Delete</a>
+	<a class="active" href="update.html">Update</a>
+  </div>
+  <div id="login-box">
+	<h1>Update Student Record</h1>
+	<div class="left">
+		<form method="post" action="./update">
+
+			<input type="text" name="id" placeholder="ID"/> 
+			<input type="text" name="name"  placeholder="Name"/> 
+			  <input type="text" name="roll" placeholder="Roll Number"/> 
+			  <input type="text" name="branch"  placeholder="Branch" />     
+			  <input type="text" name="year"  placeholder="Year"/> 
+			  <input type="text" name="sem"  placeholder="Semester"/>             
+			  <input type="date" style="margin-bottom: 10px; "name="dob"  placeholder="DOB"/>            
+			  <input type="text" name="address"  placeholder="Address" /> 
+			<input type=submit value=UPDATE><br>
+		</form>
+</div>
+</div>
+
+</body>
+</html>

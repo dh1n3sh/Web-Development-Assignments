@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Form Validation
+	</title>
+<style type="text/css">
+
+	h1{
+		text-align:center;
+	}
+	.main{
+		/*text-align:center; */
+		margin-left: 10%;
+	}
+	.field{
+		margin-right: 10px;
+		margin-bottom: 20px
+	}
+	.inp{
+		margin-left: 20px;
+		margin-bottom: 20px
+	}
+	.button{
+		margin-left: 30px;
+		margin-top: 30px;
+	}
+
+</style>
+<script type="text/javascript" src="rules.js"></script>
+</head>
+
+<body>
+	<h1>Form Validator</h1>
+	<div class = "main" >
+
+		<form name="regform" action='post' method="login">
+		<label class="field" id='name'><b>Name : </b></label>
+		  <input type="radio" name="sal" value="Mr. " checked> Mr. 
+		  <input type="radio" name="sal" value="Miss. "> Miss. 
+		  <input type="radio" name="sal" value="Mrs. "> Mrs.
+		  <input type="radio" name="sal" value="Dr. "> Dr. 
+		  <input class="inp" required="true" type="text" id="name" name="name">
+		  <!-- <label id="name-error"> </label> -->
+		  <br>
+
+		  <label class="field"></label><b>User Name : </b></label>
+		  <input class="inp"  type="text" name='username' onfocus="validateName();" required="true">
+		  <br>
+
+		 <label class="field"><b>Password : </b></label>
+		  <input class="inp" required="true" type="Password" name='pwd' onfocus="validateUsername();">
+		<br>
+		 <label class="field"><b>Email : </b></label>
+		  <input class="inp" required="true" type="Email" name=emailid onfocus="validatePwd();">
+		  		  <br>
+		 <label class="field"><b>Dob : </b></label>
+		  <input class="inp"  type="date" name=dob min=1990-01-01 max=2001-01-01 onfocus="validateEmail();">
+		  		  <br>
+		 <label class="field" id="image"><b>Photo : </b></label>
+		  <input class="inp" type="file" name="photo" onfocus="validateDob();">
+		  <br>
+		   <label class="field"><b>Languages known : </b></label>
+		   <input type="checkbox" id="checkbox-1" name="lang" value="english" > Tamil
+		    <input type="checkbox" id="checkbox-2"name="lang" value="english" > English
+			 <input type="checkbox" id="checkbox-3"name="lang" value="english"> Hindi
+			 <input type="checkbox" id="checkbox-4"name="lang" value="others" onchange="other()"> Others
+			 <input type = 'text' id='checkbox-5' style='visibility: hidden'>
+		     <br>
+		  	 <label class="field"><b>Additional Expertise : </b></label>
+		  	 <textarea name=expertise></textarea>
+			<br>
+			<input class="button" type="Submit" value="submit">
+			<input class="button"  type="Reset" value="clear">  	
+		</form> 
+
+	</div>
+
+</body>
+</html>

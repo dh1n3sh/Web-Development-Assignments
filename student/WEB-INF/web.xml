@@ -1,0 +1,55 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+    <display-name>Servlet Hello World</display-name>    
+    
+    <servlet>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <servlet-class>InsertData</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+
+  <servlet>
+    <servlet-name>delete</servlet-name>
+    <servlet-class>delete</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <servlet-name>search</servlet-name>
+    <servlet-class>search</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+
+  
+<servlet>
+
+<servlet-name>editrecord</servlet-name>
+
+<servlet-class>editrecord</servlet-class>
+
+</servlet>
+
+
+<servlet-mapping>
+
+<servlet-name>editrecord</servlet-name>
+
+<url-pattern>/update</url-pattern>
+
+</servlet-mapping>
+
+</web-app>  

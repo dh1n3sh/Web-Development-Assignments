@@ -5,12 +5,12 @@
     <display-name>Servlet Hello World</display-name>    
     
     <servlet>
-        <servlet-name>helloWorldServlet</servlet-name>
+        <servlet-name>Insert</servlet-name>
         <servlet-class>InsertData</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>helloWorldServlet</servlet-name>
+        <servlet-name>Insert</servlet-name>
         <url-pattern>/insert</url-pattern>
     </servlet-mapping>
 

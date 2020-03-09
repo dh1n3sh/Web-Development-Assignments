@@ -18,15 +18,43 @@
 			height: 50px;
 		}
 	</style>
+	 <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="nav.css">
 </head>
 	<body>
+	<script type="text/javascript">
+		function Timer_start(){
+			var n = 25;
+			var timer= setTimeout(countDown,1000);
+			document.getElementById("questions").style="display:block";
+			document.getElementById("Timerstart").style="display:none";
+			function countDown(){
+			   n--;
+			   if(n > 0){
+			      timer=setTimeout(countDown,1000);
+			   }
+			   document.getElementById("time").innerHTML = "<b>TIME LEFT: "+ n +"</b>";	
+					
+			  if(n==0)			
+			   {	alert("TIME UP !");				
+				window.location.reload(true);
+			   }
+			}
+		}
+	</script>
+	<div class="topnav">
+         <a style="float: right;" id="time"> Time Left : </a>
+      </div>
+	<div id="container">
+	<button type="submit" id="Timerstart" onclick="Timer_start();" class="start">START TEST</button>
 		<center><h1><b><u>ONLINE QUIZ</u></b></h1></center>
+		<%-- <br/>
 		<br/>
 		<br/>
 		<br/>
 		<br/>
-		<br/>
-		<br/>
+		<br/> --%>
+		<div id="questions" class="left" style="display:none">
 		<sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
          url = "jdbc:mysql://localhost:3308/quiz"
          user = "root"  password = "ssn"/>
@@ -39,14 +67,13 @@
                	<label><c:out value = "${row.qid}"/></label>
 				<label><c:out value = "${row.question}"/> </label><br/>
 				<input type="radio" id   name="${row.qid}" value="${row.option1}"><c:out value = "${row.option1}"/></input><br/>
-				<input type="radio"  name="${row.qid}" value="${row.option2}"><c:out value = "${row.option2}"/></input><br/>
+				<input type="radio"  name="${row.qid}" value   ="${row.option2}"><c:out value = "${row.option2}"/></input><br/>
 				<input type="radio"  name="${row.qid}" value="${row.option3}"><c:out value = "${row.option3}"/></input><br/>
 				<br/>
 				<br/>
 
 			</c:forEach>
-			<br/>
-			<br/>
+
 			<button type="button"  class="finish" onclick="checkAnswer()" >FINISH</button>
 			</form>
 			<script type="text/javascript">
@@ -78,8 +105,11 @@
 					alert("You have Got : "+count);
 					var f_elem = document.getElementById('form1');
 					f_elem.reset();
-
+								document.getElementById("questions").style="display:block";
+			document.getElementById("Timerstart").style="display:none";
 				}
 			</script>
+		</div>
+		</div>
 	</body>
 </html>

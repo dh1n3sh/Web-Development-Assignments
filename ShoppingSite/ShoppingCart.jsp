@@ -15,7 +15,7 @@ font-weight: 500;
 
 font-size: 30px;">
   <div class="topnav">
-    <a href="AddToShoppingCart.jsp">Home</a>
+    <a href="add.jsp">Home</a>
     <a class="active" href="ShoppingCart.jsp">Cart</a>
   </div>
   <p></p>
@@ -57,7 +57,7 @@ font-size: 30px;">
       </tr>
     </table>
   </center>
-  <!-- <a href="AddToShoppingCart.jsp">Back to Catalog</a> -->
+  <!-- <a href="add.jsp">Back to Catalog</a> -->
 </body>
 
 </html>

@@ -7,60 +7,13 @@
 <head>
   <title>Online Shopping</title>
   <link rel="stylesheet" href="nav.css">
-  <style>
-    table {
-      border-collapse: collapse;
-    }
-
-    tr {
-      border: solid gray;
-      border-width: 1px 0;
-      padding-top: 20px;
-    }
-
-    tr:first-child {
-      border-top: none;
-    }
-
-    td {
-      margin-left: 30px;
-      margin-right: 30px;
-    }
-
-    tr:nth-last-child(2) {
-      border-bottom: none;
-    }
-
-    tr:last-child {
-      border-bottom: none;
-    }
-
-    button {
-      padding: 0;
-      border: none;
-    }
-  </style>
-</head>
+  </head>
 
 <body style="font-family: 'Raleway', sans-serif;
 font-weight: 500;
 
 font-size: 30px;">
-  <!-- <%
-      Enumeration e = cart.getEnumeration();
-      String[] tmpItem;
-      String[] qt = new String[3];
-      qt[0]="0";
-      qt[1]="0";
-      qt[2]="0";
-
-      // Iterate over the cart
-      while (e.hasMoreElements()) {
-        tmpItem = (String[])e.nextElement();
-        int i =Integer.parseInt(tmpItem[0]);
-        qt[i]=tmpItem[3];
-    %> -->
-  <%-- <% 
+<% 
 
     String id = request.getParameter("id");
     if ( id != null ) {
@@ -83,21 +36,18 @@ font-size: 30px;">
         }
       }
   }
-  %> --%>
-  <div class="topnav">
+  %>
+ <div class="topnav">
     <a class="active" href="add.jsp">Home</a>
     <a href="ShoppingCart.jsp"> Cart</a>
-    <%-- <a style="float: right;">Shopping Cart Total Quantity: <%=cart.getNumOfItems() %></a>
-    <a style="float: right;"> Total Estimated Price: $<%=cart.getCost() %></a> --%>
+    <a style="float: right;">Shopping Cart Total Quantity: <%=cart.getNumOfItems() %></a>
+    <a style="float: right;"> Total Estimated Price: $<%=cart.getCost() %></a>
 
   </div>
-
-
-  <center>
+<center>
     <h1>Online Electronic Store</h1>
   </center>
-
-  <table width="800px" cellspacing="70" cellpadding="10" align="center">
+ <table width="800px" cellspacing="70" cellpadding="10" align="center">
     <!-- <tr>
       <th>Image</th>
       <th colspan="2">Description</th>
@@ -129,8 +79,12 @@ font-size: 30px;">
       </form>
       </td>
       <td>
+  <select>
+<option>1</option>
+<option>2</option>
 
-        <br><input type="submit" name="Submit" value="Remove"><br>
+<option>3</option>  <select>
+        <%-- <br><input type="submit" name="Submit" value="Remove"><br> --%>
       </td>
     </tr>
     <!-- <tr>
@@ -162,7 +116,7 @@ font-size: 30px;">
       </td>
       <td>
    
-        <br><input type="submit" name="Submit" value="Remove"><br>
+        <%-- <br><input type="submit" name="Submit" value="Remove"><br> --%>
       </td>
       </form>
     </tr>
@@ -190,11 +144,10 @@ font-size: 30px;">
       </td>
       <td>
 
-        <br><input type="submit" name="Submit" value="Remove"><br>
+        <%-- <br><input type="submit" name="Submit" value="Remove"><br> --%>
       </td>
     </tr>
    
   </table>
 </body>
-
 </html>
